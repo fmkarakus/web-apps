@@ -132,20 +132,15 @@ const entriesManager = (entries, command, key, value) => {
 // step 2: declare callback that uses main app function
 const readFileCb = (err, entriesString) => {
   // step 4: handle file system error, or execute main app function
-<<<<<<< HEAD
+
   if (err) {
     console.error(err)
     return;
-=======
-  if (_) {
-    _;
-    _;
->>>>>>> 294a10769bc9c95ba2c6da36cbc8d5defee08ba2
-  }
+
 
   const parsedEntries = JSON.parse(entriesString);
   entriesManager(parsedEntries, process.argv[2], process.argv[3], process.argv[4]);
 };
-
+}
 // step 3: read the stored data and execute the callback
 fs.readFile(ENTRIES_PATH,'utf-8', readFileCb);

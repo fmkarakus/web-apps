@@ -12,6 +12,7 @@ const fetchAndLoadFile = fileName =>
     .catch(err => console.error(err));
 
 const saveFile = (fileName, fileText) => {
+  debugger
   fetch('/files/' + encodeURIComponent(fileName), {
     method: 'POST',
     body: JSON.stringify({ text: fileText }),
