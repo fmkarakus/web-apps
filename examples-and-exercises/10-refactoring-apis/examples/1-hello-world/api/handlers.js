@@ -5,7 +5,7 @@ const handlers = {
     const reply = `Hello ${name}! Your tree is ${req.query.tree}`;
 
     res.status(200)
-      .send(reply);
+      .send(reply); 
   },
   sayBye: (req, res) => {
 
