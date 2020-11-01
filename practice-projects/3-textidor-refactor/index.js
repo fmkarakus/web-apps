@@ -41,6 +41,15 @@ app.use('/api', api);
 
 
 
+
+// ..... to here ------
+
+// - error handling middleware
+app.use(function (err, req, res, next) {
+  console.error(err.stack);
+  res.status(500).end();
+});
+
 // - open server -
 app.listen(config.PORT, () => {
   console.log(
